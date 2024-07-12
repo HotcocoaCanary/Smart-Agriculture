@@ -36,5 +36,6 @@
         <!-- 指定每个表的生成策略 -->
         <table schema="smart_agriculture" tableName="smart_user" domainObjectName="User"/>
         <table schema="smart_agriculture" tableName="smart_device" domainObjectName="Device"/>
+        <table schema="smart_agriculture" tableName="smart_news" domainObjectName="News"/>
     </context>
 </generatorConfiguration>
