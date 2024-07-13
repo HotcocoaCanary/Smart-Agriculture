@@ -36,9 +36,9 @@ public class NewsController {
     public R<String> updateNews(@RequestBody News news) {
         int judge = newsService.update(news);
         if (judge == 1) {
-            return R.ok("添加成功");
+            return R.ok("更新成功");
         }
-        return R.fail("添加失败");
+        return R.fail("更新失败");
     }
 
     @PostMapping("/search")

@@ -1,6 +1,7 @@
 package org.example.smartagriculture.controller;
 
 import jakarta.annotation.Resource;
+import org.example.smartagriculture.common.R;
 import org.example.smartagriculture.model.User;
 import org.example.smartagriculture.service.UserService;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +18,8 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/login")
-    public User login(@RequestParam("username") String username, @RequestParam("password") String password) {
+    public R<User> login(@RequestParam("username") String username, @RequestParam("password") String password) {
         logger.info("登录");
-        return userService.login(username, password);
+        return R.ok(userService.login(username, password));
     }
 }
